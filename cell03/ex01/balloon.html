@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balloon Interaction</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        #balloon {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="balloon"></div>
+
+    <script>
+        const balloon = document.getElementById('balloon');
+        const colors = ['red', 'green', 'blue'];
+        let currentColorIndex = 0;
+        let size = 200;
+
+        balloon.addEventListener('click', () => {
+            size += 10;
+            if (size > 420) {
+                size = 200;
+                currentColorIndex = 0;
+                balloon.style.backgroundColor = colors[currentColorIndex];
+            } else {
+                currentColorIndex = (currentColorIndex + 1) % colors.length;
+                balloon.style.backgroundColor = colors[currentColorIndex];
+            }
+            balloon.style.width = `${size}px`;
+            balloon.style.height = `${size}px`;
+        });
+
+        balloon.addEventListener('mouseleave', () => {
+            if (size > 200) {
+                size -= 5;
+                if (size < 200) {
+                    size = 200;
+                }
+                currentColorIndex = (currentColorIndex - 1 + colors.length) % colors.length;
+                balloon.style.backgroundColor = colors[currentColorIndex];
+                balloon.style.width = `${size}px`;
+                balloon.style.height = `${size}px`;
+            }
+        });
+    </script>
+</body>
+</html>
