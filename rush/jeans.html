@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: #333;
+            background-image: url('bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: whitesmoke;
+            border-bottom: 2px solid #ccc;
+            padding: 10px 20px;
+            display: flex;
+            gap: 20px;
+            z-index: 3;
+        }
+
+        nav a {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            text-decoration: none;
+            color: #333;
+        }
+
+        nav a:hover {
+            color: #007BFF;
+        }
+
+        .portfolio-page {
+            height: 100vh;
+            padding: 160px 20px;
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        .owner-info {
+            text-align: center;
+            margin: 20px auto;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        .owner-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        .owner-photo img {
+            width: 100%;
+            height: auto;
+        }
+
+        .skills, .contact {
+            margin: 20px 0;
+        }
+
+        .skills ul {
+            list-style: none;
+        }
+
+        .skills ul li {
+            padding: 5px 0;
+        }
+        .profile{
+            border: 1px solid #000000;
+            width: 300px;
+            min-height: 100px;
+            margin: auto;
+            background-color: rgba(255, 255, 255, 0.4);
+            z-index: 1;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="rush_project.html">Home</a>
+        <a href="jeans.html">Jeans</a>
+        <a href="fourth.html">Fourth</a>
+    </nav>
+
+    <section id="jeans" class="portfolio-page">
+        <div class = "profile">
+            <div class="owner-info">
+                <div class="owner-photo">
+                    <img src="jeans.jpg" alt="Owner Photo">
+                </div>
+                <h2>Jeans</h2>
+                <div class="skills">
+                    <h3>Skills</h3>
+                    <ul>
+                        <li>Python</li> 
+                        <li>Unity C#</li>
+                        <li>Game Design</li>
+                    </ul>
+                </div>
+                <div class="contact">
+                    <h3>Contact</h3>
+                    <p>Email: jeansry245@gmail.com</p>
+                    <p>Instagram: @_jynsx</p>
+                    <p>Phone: 063-266-1454</p>
+                </div>
+            </div>
+        </div>
+    </section>
